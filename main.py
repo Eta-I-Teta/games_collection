@@ -2,6 +2,7 @@ import pygame
 import sys
 
 from engine.global_variables import *
+from engine.classes.GUI import *
 
 # Инициализация Pygame
 pygame.init()
@@ -14,31 +15,23 @@ pygame.display.set_caption("Коллекция игр")
 clock = pygame.time.Clock()
 
 # Основной игровой цикл
-def main():
-    running = True
+running = True
+while running:
+    # Обработка событий
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            running = False
     
-    while running:
-        # Обработка событий
-        for event in pygame.event.get():
-            if event.type == pygame.QUIT:
-                running = False
-            elif event.type == pygame.KEYDOWN:
-                if event.key == pygame.K_ESCAPE:
-                    running = False
-        
-        # Обновление игровой логики
-        
-        # Отрисовка
-        screen.fill(COLOR["black"])
-        
-        # Здесь будет код отрисовки
-        
-        pygame.display.flip()
-        clock.tick(CONFIG_SCREEN["FPS"])
+    # Обновление игровых объектов
     
-    # Завершение работы
-    pygame.quit()
-    sys.exit()
+    # Отрисовка
+    screen.fill(COLOR["black"])
+    
+    # Здесь будет ваш код отрисовки
+    
+    pygame.display.flip()
+    clock.tick(CONFIG_SCREEN["FPS"])
 
-if __name__ == "__main__":
-    main()
+# Завершение работы
+pygame.quit()
+sys.exit()
