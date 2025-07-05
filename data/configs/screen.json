@@ -2,6 +2,26 @@
     "FPS": 60,
     "main":{
         "width": 800,
-        "height": 600
+        "height": 600,
+        "window_name": "Games collection",
+        "icon": "data/images/icons/main.png"
+    },
+    "font":{
+        "family": "data/fonts/dehinted-Font_1.ttf",
+        "size": 20,
+        "line_spacing": 7,
+        "color": [255, 255, 255]
+    },
+    "path_finder":{
+        "width": 700,
+        "height": 700,
+        "window_name": "Path finder",
+        "icon": "data/images/icons/main.png"
+    },
+    "end_game":{
+        "width": 250,
+        "height": 50,
+        "window_name": "Конец игры",
+        "icon": "data/images/icons/main.png"
     }
 }
